@@ -1,9 +1,11 @@
 extends Control
 
+## Export 
 export(String, FILE, "*.tscn") var menu_inicial = ""
 
-onready var boton_pantalla_completa: CheckBox = $PanelPrincipal/ContenedorPrincipal/PantallaCompleta
-onready var opcion_resoluciones = $PanelPrincipal/ContenedorPrincipal/Resolucion/OpcionResolucion
+#Atributos onready
+onready var boton_pantalla_completa: CheckBox = $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/PantallaCompleta
+onready var opcion_resoluciones = $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/Resolucion/OpcionResolucion
 
 onready var resoluciones: Dictionary = {"640 x 480": Vector2(640, 480),
 	 "960 x 640": Vector2(960, 640), # resolucion por defecto
@@ -16,9 +18,9 @@ onready var bus_indices : Dictionary = {"Master": AudioServer.get_bus_index("Mas
 	"Musica": AudioServer.get_bus_index("Musica"), "SFX": AudioServer.get_bus_index("SFX")}
 
 onready var bus_etiquetas: = {
-	"Master": $PanelPrincipal/ContenedorPrincipal/VolumenGeneral/NivelVolumen,
-	"Musica": $PanelPrincipal/ContenedorPrincipal/VolumenMusica/NivelVolumen,
-	"SFX": $PanelPrincipal/ContenedorPrincipal/VolumenSFX/NivelVolumen}
+	"Master": $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenGeneral/NivelVolumen,
+	"Musica": $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenMusica/NivelVolumen,
+	"SFX": $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenSFX/NivelVolumen}
 
 ##Metodos
 func _ready() -> void:
@@ -34,8 +36,6 @@ func cargar_resoluciones() ->void:
 
 func centrar_pantalla(resolucion: Vector2) -> void: 
 	var tamanio_pantalla: = OS.get_screen_size()
-	print(tamanio_pantalla)
-	print(resolucion)
 	OS.set_window_position((tamanio_pantalla - resolucion) *0.5)
 
 func chequear_resolucion_actual()-> void:
@@ -66,6 +66,9 @@ func cambiar_volumen(indice_bus: int, subir: bool) ->void:
 	nuevo_volumen = clamp(nuevo_volumen, -50, 150)
 	AudioServer.set_bus_volume_db(indice_bus, nuevo_volumen)
 	cargar_volumen_buses()
+
+func is_bus_mute(bus_idx: int) -> void:
+	pass
 
 ## Señales Internas 
 func _on_BotonRegresar_pressed() -> void:

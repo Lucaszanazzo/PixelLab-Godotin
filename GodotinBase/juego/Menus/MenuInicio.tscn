@@ -30,6 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
 menu_ajustes = "res://juego/Menus/MenuAjustes.tscn"
+nivel_inial = "res://juego/Niveles/Nivel0.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -100,5 +101,6 @@ stream = ExtResource( 4 )
 autoplay = true
 bus = "Musica"
 
+[connection signal="pressed" from="VBoxContainer/BotonNuevo" to="." method="_on_BotonNuevo_pressed"]
 [connection signal="pressed" from="VBoxContainer/BotonOpciones" to="." method="_on_BotonOpciones_pressed"]
 [connection signal="pressed" from="VBoxContainer/BotonSalir" to="." method="_on_BotonSalir_pressed"]

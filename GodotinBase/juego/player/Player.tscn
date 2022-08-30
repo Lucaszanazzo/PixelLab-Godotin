@@ -1653,11 +1653,11 @@ nodes/TransicionSueloAire/position = Vector2( 360, 120 )
 nodes/VelCaminar/node = SubResource( 27 )
 nodes/VelCaminar/position = Vector2( -100, 160 )
 nodes/output/position = Vector2( 820, 160 )
-node_connections = [ "output", 0, "MezclaDisparar", "VelCaminar", 0, "Animation 2", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCaminar", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer" ]
+node_connections = [ "output", 0, "MezclaDisparar", "VelCaminar", 0, "Animation 2", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCaminar" ]
 
 [node name="Godotin" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
-collision_mask = 6
+collision_mask = 14
 script = ExtResource( 2 )
 __meta__ = {
 "__editor_plugin_screen__": "3D"
@@ -1849,3 +1849,10 @@ camara_y_invertida = true
 [node name="CamaraPlayer" type="Camera" parent="BrazoCamara"]
 transform = Transform( 2, 0, 0, 0, 1.99091, 0.190475, 0, -0.190475, 1.99091, 0.199973, 4.1884, 6.65405 )
 current = true
+
+[node name="Linterna" type="SpotLight" parent="."]
+transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -0.465, 1.268, 0.356 )
+light_color = Color( 0.968627, 1, 0, 1 )
+light_energy = 0.0
+spot_range = 7.2
+spot_angle = 12.0

@@ -18,17 +18,40 @@ _global_script_classes=[ {
 "class": "Godotin",
 "language": "GDScript",
 "path": "res://juego/player/Godotin.gd"
+}, {
+"base": "Area",
+"class": "Moneda",
+"language": "GDScript",
+"path": "res://juego/Items/MonedaDorada.gd"
+}, {
+"base": "Area",
+"class": "PortalNivel",
+"language": "GDScript",
+"path": "res://juego/Items/Portal.gd"
+}, {
+"base": "Area",
+"class": "Sierra",
+"language": "GDScript",
+"path": "res://juego/objetos/danio/Sierra.gd"
 } ]
 _global_script_class_icons={
 "ArbolAnimacionPlayer": "",
-"Godotin": ""
+"Godotin": "",
+"Moneda": "",
+"PortalNivel": "",
+"Sierra": ""
 }
 
 [application]
 
 config/name="Godotin"
-run/main_scene="res://juego/Niveles/NivelTest.tscn"
+run/main_scene="res://juego/Niveles/Nivel0.tscn"
 config/icon="res://icono_godotin.png"
+
+[autoload]
+
+Eventos="*res://juego/Autoloads/Eventos.gd"
+DatosJuego="*res://juego/Autoloads/DatosJuego.gd"
 
 [display]
 
@@ -85,6 +108,8 @@ diparar={
 3d_physics/layer_1="Player"
 3d_physics/layer_2="Plataformas"
 3d_physics/layer_3="Mundo"
+3d_physics/layer_4="Sierra"
+3d_physics/layer_5="Portal"
 
 [physics]
 

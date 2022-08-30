@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sierra_sonido.wav-fcdba1ec1d5c314a5c2020ec4d8da9db.sample"
+
+[deps]
+
+source_file="res://recursos/audio/sfx/sierra_sonido.wav"
+dest_files=[ "res://.import/sierra_sonido.wav-fcdba1ec1d5c314a5c2020ec4d8da9db.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

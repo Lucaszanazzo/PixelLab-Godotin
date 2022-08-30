@@ -19,13 +19,26 @@ var vector_snap: Vector3 = Vector3.DOWN
 var salto_interrumpido = false
 var saltando = false 
 var cayendo = false 
+var disparando = false
 
 #Atributos onready 
 onready var brazo_camara: SpringArm = $BrazoCamara
 onready var armadura: Spatial = $Armadura
 onready var arbol_animaciones: ArbolAnimacionPlayer = $ArbolDeAnimaciones
+onready var linterna: SpotLight = $Linterna
 
 ##Metodos
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("diparar"):
+		arbol_animaciones.set_mezcla_disparar(1)
+		disparando = true
+		linterna.light_energy = 15
+	elif event.is_action_released("diparar"):
+		arbol_animaciones.set_mezcla_disparar(0)
+		disparando = false 
+		linterna.light_energy = 0
+
+
 func _process(_delta: float) -> void:
 	brazo_camara.translation = translation
 
@@ -37,12 +50,9 @@ func _physics_process(_delta: float) -> void:
 	var direccion_vista_player = Vector2(movimiento.z, movimiento.x)
 	if direccion_vista_player.length() > 0:
 		armadura.rotation.y = direccion_vista_player.angle() 
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("diparar"):
-		arbol_animaciones.set_mezcla_disparar(1)
-	elif event.is_action_released("diparar"):
-		arbol_animaciones.set_mezcla_disparar(0)
+	
+	if disparando:
+		linterna.rotation.y = armadura.rotation.y - 3.14159
 
 
 ##Metodos Custom 
@@ -94,7 +104,9 @@ func movimiento_vertical() -> void:
 		for i in range(1, 11, 1):
 			arbol_animaciones.set__mezcla_saltar_caer(i * 0.1)
 
-
+func respawn()-> void:
+	DatosJuego.restar_vidas()
+	get_tree().reload_current_scene()
 
 
 

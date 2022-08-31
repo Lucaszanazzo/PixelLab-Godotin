@@ -4,6 +4,7 @@ extends Control
 ##Export var
 export(String, FILE, "*.tscn") var menu_ajustes = ""
 export(String, FILE, "*.tscn") var nivel_inial = ""
+export(String, FILE, "*.tscn") var pantalla_carga= ""
 
 ##Señales Internas 
 func _on_BotonSalir_pressed() -> void:
@@ -21,4 +22,6 @@ func _get_configuration_warning() -> String:
 	return ""
 
 func _on_BotonNuevo_pressed() -> void:
-	get_tree().change_scene(nivel_inial)
+	DatosJuego.nivel_actual = nivel_inial
+# warning-ignore:return_value_discarded
+	get_tree().change_scene(pantalla_carga)

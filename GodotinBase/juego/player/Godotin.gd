@@ -106,6 +106,7 @@ func movimiento_vertical() -> void:
 
 func respawn()-> void:
 	DatosJuego.restar_vidas()
+# warning-ignore:return_value_discarded
 	get_tree().reload_current_scene()
 
 

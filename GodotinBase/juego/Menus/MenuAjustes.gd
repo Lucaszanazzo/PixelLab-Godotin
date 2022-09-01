@@ -40,6 +40,7 @@ func centrar_pantalla(resolucion: Vector2) -> void:
 
 func chequear_resolucion_actual()-> void:
 	var texto_resolucion_actual = String(OS.window_size.x) + " x " + String(OS.window_size.y)
+# warning-ignore:unused_variable
 	var indice_resolucion_seleccionado: int = 0
 	
 	for i in range(opcion_resoluciones.get_item_count()):
@@ -67,11 +68,12 @@ func cambiar_volumen(indice_bus: int, subir: bool) ->void:
 	AudioServer.set_bus_volume_db(indice_bus, nuevo_volumen)
 	cargar_volumen_buses()
 
-func is_bus_mute(bus_idx: int) -> void:
-	pass
 
 ## Señales Internas 
 func _on_BotonRegresar_pressed() -> void:
+	var guardar: GuardarCargar = GuardarCargar.new()
+# warning-ignore:return_value_discarded
+	guardar.guardar_datos_configuracion()
 # warning-ignore:return_value_discarded
 	get_tree().change_scene(menu_inicial)
 

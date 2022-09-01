@@ -1,8 +1,14 @@
+#Menupresentacion
 tool
 extends Control
-
+#Atributos export
 export(String, FILE, "*.tscn") var menu_inicial = ""
 
+func _ready() -> void:
+	var cargar:GuardarCargar = GuardarCargar.new()
+	cargar.cargar_datos_configuracion()
+
+## Metodos Custom 
 func _get_configuration_warning() -> String:
 	if menu_inicial == "":
 		return "No hay menu inicial asignado"

@@ -5,6 +5,7 @@ var boton_sfx: AudioStreamPlayer
 
 
 func _ready() -> void:
+# warning-ignore:return_value_discarded
 	connect("pressed", self, "presionado")
 	boton_sfx = get_node(nodo_sfx)
 

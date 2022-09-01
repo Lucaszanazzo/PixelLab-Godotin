@@ -30,8 +30,8 @@ func seleccionar_ruta(archivo: int) -> String:
 func chequear_existencia_direcctorio(ruta: String) -> void:
 	var dir = Directory.new()
 	if not dir.dir_exists(ruta):
+# warning-ignore:return_value_discarded
 		Directory.new().make_dir_recursive(ruta)
-		print("se creo ruta")
 
 
 ## Cargar datos 
@@ -98,32 +98,3 @@ func guardar_datos_juego() -> int:
 	var resultado: int = ResourceSaver.save(ruta, datos)
 	
 	return resultado
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

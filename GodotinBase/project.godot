@@ -34,11 +34,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://juego/almacenamiento/GuardarCargar.gd"
 }, {
-"base": "Node",
-"class": "GuardarCargartest",
-"language": "GDScript",
-"path": "res://juego/almacenamiento/GuardarCargarTes.gd"
-}, {
 "base": "Area",
 "class": "Moneda",
 "language": "GDScript",
@@ -60,7 +55,6 @@ _global_script_class_icons={
 "DatosUsuarioGuardado": "",
 "Godotin": "",
 "GuardarCargar": "",
-"GuardarCargartest": "",
 "Moneda": "",
 "PortalNivel": "",
 "Sierra": ""

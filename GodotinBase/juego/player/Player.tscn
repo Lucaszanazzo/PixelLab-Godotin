@@ -1653,7 +1653,7 @@ nodes/TransicionSueloAire/position = Vector2( 360, 120 )
 nodes/VelCaminar/node = SubResource( 27 )
 nodes/VelCaminar/position = Vector2( -100, 160 )
 nodes/output/position = Vector2( 820, 160 )
-node_connections = [ "output", 0, "MezclaDisparar", "VelCaminar", 0, "Animation 2", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCaminar" ]
+node_connections = [ "output", 0, "MezclaDisparar", "VelCaminar", 0, "Animation 2", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCaminar", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4" ]
 
 [node name="Godotin" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )

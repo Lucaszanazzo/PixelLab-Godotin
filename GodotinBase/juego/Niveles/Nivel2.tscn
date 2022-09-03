@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
+
+[node name="Nivel2" instance=ExtResource( 1 )]
+numero_nivel = 2
+proximo_nivel = "res://juego/Niveles/Nivel3.tscn"
+
+[node name="Portal" parent="." index="8"]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.249192, 14.8879 )

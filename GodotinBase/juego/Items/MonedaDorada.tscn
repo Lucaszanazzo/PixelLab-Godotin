@@ -5,8 +5,8 @@
 [ext_resource path="res://recursos/audio/sfx/moneda_2.wav" type="AudioStream" id=3]
 [ext_resource path="res://juego/Items/MonedaDorada.gd" type="Script" id=4]
 
-[sub_resource type="ConvexPolygonShape" id=2]
-points = PoolVector3Array( -0.173205, 0.1, -0.05, 0, 0, -0.05, -0.173205, 0.1, 0.05, -0.173205, 0.3, -0.05, 0, 0, 0.05, 0.173205, 0.1, -0.05, -0.173205, 0.3, 0.05, 0, 0.4, -0.05, 0.173205, 0.1, 0.05, 0.173205, 0.3, -0.05, 0, 0.4, 0.05, 0.173205, 0.3, 0.05 )
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.194539, 0.177725, 0.0396905 )
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "coinGold_Mesh coinGold"
@@ -136,7 +136,8 @@ tracks/2/keys = {
 script = ExtResource( 4 )
 
 [node name="Colisionador" type="CollisionShape" parent="."]
-shape = SubResource( 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.195145, 0 )
+shape = SubResource( 6 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 

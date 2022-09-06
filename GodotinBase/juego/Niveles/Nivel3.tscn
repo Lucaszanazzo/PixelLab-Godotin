@@ -1,6 +1,140 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/Bloques/BloqueLargoCesped.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/Bloques/BloqueCesped.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/objetos/danio/Sierra.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/Bloques/BloqueMediaPendiente.tscn" type="PackedScene" id=5]
 
 [node name="Nivel3" instance=ExtResource( 1 )]
 numero_nivel = 3
+proximo_nivel = "res://juego/Menus/MenuFinal.tscn"
+
+[node name="BloqueLargoCesped" parent="Bloques" index="0" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -8.87741, 7.09139, -8.29799 )
+
+[node name="BloqueLargoCesped2" parent="Bloques" index="1" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -9.37069, 6.00689, 0.702008 )
+
+[node name="BloqueLargoCesped7" parent="Bloques" index="2" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -3.49022, 6.00689, 0.702008 )
+
+[node name="BloqueLargoCesped8" parent="Bloques" index="3" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -3.49022, 6.00689, -6.9821 )
+
+[node name="BloqueLargoCesped3" parent="Bloques" index="4" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -9.37069, 5.00689, 9.70201 )
+
+[node name="BloqueLargoCesped4" parent="Bloques" index="5" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -4.37069, 4.00689, 9.70201 )
+
+[node name="BloqueLargoCesped5" parent="Bloques" index="6" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0.629313, 2.00689, 9.70201 )
+
+[node name="BloqueLargoCesped6" parent="Bloques" index="7" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 3.62931, 1.00689, 9.70201 )
+
+[node name="BloqueCesped" parent="Bloques" index="8" instance=ExtResource( 3 )]
+transform = Transform( 1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, -6.36244, 6.92172, -7.32957 )
+
+[node name="BloqueCesped2" parent="Bloques" index="9" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.41899, 5.81526, -3.09705 )
+
+[node name="BloqueCesped3" parent="Bloques" index="10" instance=ExtResource( 3 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 1.2, -6.51226, 6.20201, 0.709272 )
+
+[node name="BloqueCesped4" parent="Bloques" index="11" instance=ExtResource( 3 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 1.2, -9.51226, 5.20201, 6.04996 )
+
+[node name="BloqueCesped5" parent="Bloques" index="12" instance=ExtResource( 3 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 1.2, -9.51226, 5.20201, 3.73171 )
+
+[node name="BloqueCesped6" parent="Bloques" index="13" instance=ExtResource( 3 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 1.2, -6.91142, 4.79337, 9.57149 )
+
+[node name="BloqueCesped7" parent="Bloques" index="14" instance=ExtResource( 3 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 1.2, -2.05402, 3.27578, 9.57149 )
+
+[node name="BloqueCesped8" parent="Bloques" index="15" instance=ExtResource( 3 )]
+transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 1.2, 5.94598, 0.27578, 9.57149 )
+
+[node name="BloqueMediaPendiente" parent="Bloques" index="16" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1.4, 0, 1.3, 0, 1, 0, -6.11959e-08, 2.578, 2.30771, 9.87279 )
+
+[node name="BloqueMediaPendiente2" parent="Bloques" index="17" instance=ExtResource( 5 )]
+transform = Transform( -8.74228e-08, 0, -2, 0, 1.5, 0, 2, 0, -8.74228e-08, 7.86699, 0.335264, 9.31179 )
+
+[node name="Sierra" parent="ContenedorSierras" index="0" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.908748, 3.43453, 8.68122 )
+
+[node name="Sierra2" parent="ContenedorSierras" index="1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.908748, 3.43453, 9.68122 )
+
+[node name="Sierra3" parent="ContenedorSierras" index="2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.908748, 3.43453, 9.21287 )
+
+[node name="Sierra4" parent="ContenedorSierras" index="3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.908748, 3.43453, 10.2129 )
+
+[node name="Sierra5" parent="ContenedorSierras" index="4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.90875, 4.91298, 8.68122 )
+
+[node name="Sierra6" parent="ContenedorSierras" index="5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.90875, 4.91298, 9.68122 )
+
+[node name="Sierra7" parent="ContenedorSierras" index="6" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.90875, 4.91298, 9.21287 )
+
+[node name="Sierra8" parent="ContenedorSierras" index="7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.90875, 4.91298, 10.2129 )
+
+[node name="Sierra9" parent="ContenedorSierras" index="8" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35955, 6.6416, -0.0170634 )
+
+[node name="Sierra10" parent="ContenedorSierras" index="9" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35955, 6.6416, 0.982937 )
+
+[node name="Sierra11" parent="ContenedorSierras" index="10" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35955, 6.6416, 0.514585 )
+
+[node name="Sierra12" parent="ContenedorSierras" index="11" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35955, 6.6416, 1.51459 )
+
+[node name="Sierra13" parent="ContenedorSierras" index="12" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35955, 6.6416, 0.173071 )
+
+[node name="Sierra14" parent="ContenedorSierras" index="13" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35955, 6.6416, 1.17307 )
+
+[node name="Sierra15" parent="ContenedorSierras" index="14" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35955, 6.6416, 0.70472 )
+
+[node name="Sierra16" parent="ContenedorSierras" index="15" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35955, 6.6416, 1.70472 )
+
+[node name="Sierra17" parent="ContenedorSierras" index="16" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.36709, 6.55959, -1.92637 )
+
+[node name="Sierra18" parent="ContenedorSierras" index="17" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.36709, 6.55959, -1.92637 )
+
+[node name="Sierra19" parent="ContenedorSierras" index="18" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.89874, 6.55959, -1.92637 )
+
+[node name="Sierra20" parent="ContenedorSierras" index="19" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.89874, 6.55959, -1.92637 )
+
+[node name="Sierra21" parent="ContenedorSierras" index="20" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.3308, 6.38972, -4.14885 )
+
+[node name="Sierra22" parent="ContenedorSierras" index="21" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.3308, 6.38972, -4.14885 )
+
+[node name="Sierra23" parent="ContenedorSierras" index="22" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.86245, 6.38972, -4.14885 )
+
+[node name="Sierra24" parent="ContenedorSierras" index="23" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.86245, 6.38972, -4.14885 )
+
+[node name="Portal" parent="." index="8"]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -8.75998, 8.17387, -8.72688 )

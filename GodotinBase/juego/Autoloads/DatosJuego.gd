@@ -1,16 +1,15 @@
 extends Node
 
 ##Atributos 
-var vidas: int = 3 
+var vidas: int = 3
 var monedas_oro: int = 0 
 var nivel_actual: String = ""
 var num_nivel_actual: int = 0
 var proximo_nivel: String = ""
 var puntaje: int = 0
 
-
 ## Metodos Custom 
-func reser() -> void: 
+func reset() -> void: 
 	vidas = 3 
 	monedas_oro = 0 
 	puntaje = 0
@@ -24,7 +23,6 @@ func restar_vidas() -> void:
 	vidas -=1 
 	if vidas == 0: 
 		Eventos.emit_signal("game_over")
-	
 	Eventos.emit_signal("actualizar_hud")
 
 func sumar_monedas():

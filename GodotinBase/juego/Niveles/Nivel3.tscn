@@ -4,11 +4,14 @@
 [ext_resource path="res://juego/Bloques/BloqueLargoCesped.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/Bloques/BloqueCesped.tscn" type="PackedScene" id=3]
 [ext_resource path="res://juego/objetos/danio/Sierra.tscn" type="PackedScene" id=4]
-[ext_resource path="res://juego/Bloques/BloqueMediaPendiente.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/Items/MonedaDorada.tscn" type="PackedScene" id=6]
 
 [node name="Nivel3" instance=ExtResource( 1 )]
 numero_nivel = 3
 proximo_nivel = "res://juego/Menus/MenuFinal.tscn"
+
+[node name="Bloques" parent="." index="5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876922, 0, 0 )
 
 [node name="BloqueLargoCesped" parent="Bloques" index="0" instance=ExtResource( 2 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, -8.87741, 7.09139, -8.29799 )
@@ -58,11 +61,8 @@ transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 1.2, -2.05402, 3.27578, 9.57149
 [node name="BloqueCesped8" parent="Bloques" index="15" instance=ExtResource( 3 )]
 transform = Transform( 1.2, 0, 0, 0, 1, 0, 0, 0, 1.2, 5.94598, 0.27578, 9.57149 )
 
-[node name="BloqueMediaPendiente" parent="Bloques" index="16" instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, -1.4, 0, 1.3, 0, 1, 0, -6.11959e-08, 2.578, 2.30771, 9.87279 )
-
-[node name="BloqueMediaPendiente2" parent="Bloques" index="17" instance=ExtResource( 5 )]
-transform = Transform( -8.74228e-08, 0, -2, 0, 1.5, 0, 2, 0, -8.74228e-08, 7.86699, 0.335264, 9.31179 )
+[node name="ContenedorSierras" parent="." index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876922, 0, 0 )
 
 [node name="Sierra" parent="ContenedorSierras" index="0" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.908748, 3.43453, 8.68122 )
@@ -135,6 +135,51 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.8624
 
 [node name="Sierra24" parent="ContenedorSierras" index="23" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.86245, 6.38972, -4.14885 )
+
+[node name="ContenedorMonedas" parent="." index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876922, 0, 0 )
+
+[node name="MonedaDorada" parent="ContenedorMonedas" index="0" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.76742, 5.85673, 9.16353 )
+
+[node name="MonedaDorada3" parent="ContenedorMonedas" index="1" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.76742, 5.85673, 8.34739 )
+
+[node name="MonedaDorada4" parent="ContenedorMonedas" index="2" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.76742, 5.85673, 10.0879 )
+
+[node name="MonedaDorada5" parent="ContenedorMonedas" index="3" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.76742, 7.76878, 0.699605 )
+
+[node name="MonedaDorada11" parent="ContenedorMonedas" index="4" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.59622, 7.76878, 0.699605 )
+
+[node name="MonedaDorada12" parent="ContenedorMonedas" index="5" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.42199, 7.76878, 0.699605 )
+
+[node name="MonedaDorada13" parent="ContenedorMonedas" index="6" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.42199, 7.29964, 5.36018 )
+
+[node name="MonedaDorada14" parent="ContenedorMonedas" index="7" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.42199, 7.29964, 7.55342 )
+
+[node name="MonedaDorada6" parent="ContenedorMonedas" index="8" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.76742, 7.76878, -0.116531 )
+
+[node name="MonedaDorada7" parent="ContenedorMonedas" index="9" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.76742, 7.76878, 1.624 )
+
+[node name="MonedaDorada8" parent="ContenedorMonedas" index="10" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.76742, 7.76878, -6.58733 )
+
+[node name="MonedaDorada9" parent="ContenedorMonedas" index="11" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.76742, 7.76878, -7.40347 )
+
+[node name="MonedaDorada10" parent="ContenedorMonedas" index="12" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.76742, 7.76878, -5.66293 )
+
+[node name="MonedaDorada2" parent="ContenedorMonedas" index="13" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57381, 2.64312, 9.10447 )
 
 [node name="Portal" parent="." index="8"]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -8.75998, 8.17387, -8.72688 )

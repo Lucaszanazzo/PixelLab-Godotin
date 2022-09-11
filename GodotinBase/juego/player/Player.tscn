@@ -1653,7 +1653,7 @@ nodes/TransicionSueloAire/position = Vector2( 360, 120 )
 nodes/VelCaminar/node = SubResource( 27 )
 nodes/VelCaminar/position = Vector2( -100, 160 )
 nodes/output/position = Vector2( 820, 160 )
-node_connections = [ "output", 0, "MezclaDisparar", "VelCaminar", 0, "Animation 2", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCaminar", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4" ]
+node_connections = [ "output", 0, "MezclaDisparar", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCaminar", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "VelCaminar", 0, "Animation 2" ]
 
 [node name="Godotin" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
@@ -1663,9 +1663,10 @@ __meta__ = {
 "__editor_plugin_screen__": "3D"
 }
 velocidad_max = Vector2( 10, 14 )
-gravedad = 1.2
+gravedad = 1.0
 impulso = 25.0
 fuerza_salto = 15.0
+menu_gameover = "res://juego/Menus/MenuGameOver.tscn"
 
 [node name="Colisionador" type="CollisionShape" parent="."]
 transform = Transform( 0.883914, 0, 0, 0, 1, 0, 0, 0, 0.825571, 0, 1.0405, 0.0248995 )

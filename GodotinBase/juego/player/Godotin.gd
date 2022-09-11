@@ -13,6 +13,8 @@ export var gravedad: float = 9.8
 export var impulso: float = 50.0
 export var fuerza_salto: float = 18.0
 
+export(String, FILE, "*.tscn") var menu_gameover = ""
+
 #Atributos
 var movimiento: Vector3 = Vector3.ZERO
 var vector_snap: Vector3 = Vector3.DOWN
@@ -106,25 +108,9 @@ func movimiento_vertical() -> void:
 
 func respawn()-> void:
 	DatosJuego.restar_vidas()
-# warning-ignore:return_value_discarded
-	get_tree().reload_current_scene()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	if DatosJuego.vidas == 0:
+		get_tree().change_scene(menu_gameover)
+	else: 
+		get_tree().reload_current_scene()
 
 

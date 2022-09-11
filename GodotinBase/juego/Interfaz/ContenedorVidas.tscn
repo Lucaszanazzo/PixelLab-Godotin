@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://juego/Interfaz/ContenedorInfo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://recursos/HUD/pngwing.com.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "animacion_vidas"
@@ -16,14 +17,20 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 125, 3 ), Vector2( 125, -3 ), Vector2( 125, 9 ), Vector2( 125, 5 ), Vector2( 125, 10.5 ), Vector2( 125, 3 ) ]
+"values": [ Vector2( 100, 3 ), Vector2( 100, -4 ), Vector2( 100, 8 ), Vector2( 100, 4 ), Vector2( 100, 8 ), Vector2( 100, 3 ) ]
 }
 
 [node name="ContenedorVidas" instance=ExtResource( 1 )]
+margin_right = 188.0
+margin_bottom = 81.0
 
 [node name="TextureRect" parent="." index="0"]
-margin_left = -53.0
-margin_right = 10.0
+margin_left = -88.0
+margin_top = -33.4443
+margin_right = 424.0
+margin_bottom = 478.556
+rect_scale = Vector2( 0.169168, 0.142456 )
+texture = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 autoplay = "animacion_vidas"

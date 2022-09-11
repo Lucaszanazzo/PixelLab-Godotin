@@ -1,14 +1,15 @@
 # Godot-specific ignore
-.import/
-export.cfg
-export_presets.cfg
+GodotinBase/.import/
+GodotinBase/export.cfg
+GodotinBase/export_presets.cfg
 
 #Importet translation (automatically generated from CSV files)
-*.translation
+GodotinBase/*.translation
 
 #Mono-specific ignores
-.mono/
-data_*/
+GodotinBase/.mono/
+GodotinBase/data_*/
 
 #Carpeta para ignorar 
+GodotinBase/builds
 GodotinBase/recursos/modelos

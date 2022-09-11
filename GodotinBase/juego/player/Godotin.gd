@@ -109,8 +109,10 @@ func movimiento_vertical() -> void:
 func respawn()-> void:
 	DatosJuego.restar_vidas()
 	if DatosJuego.vidas == 0:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene(menu_gameover)
 	else: 
+# warning-ignore:return_value_discarded
 		get_tree().reload_current_scene()
 
 

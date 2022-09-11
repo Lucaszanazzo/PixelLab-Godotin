@@ -64,7 +64,7 @@ func cargar_datos_juego() -> void:
 
 ## Guardar Datos 
 func guardar_datos_configuracion() -> int:
-	if OS.get_name() in DatosConfiguracion.OS_ADMITIDOS_GUARDADO:
+	if not OS.get_name() in DatosConfiguracion.OS_ADMITIDOS_GUARDADO:
 		return -1
 	
 	var ruta: String = seleccionar_ruta(CONFIG)
@@ -78,7 +78,6 @@ func guardar_datos_configuracion() -> int:
 		"sfx": AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX"))}
 	
 	var resultado: int = ResourceSaver.save(ruta, datos)
-	print("se guardo")
 	return resultado
 
 func guardar_datos_juego() -> int:
@@ -89,10 +88,9 @@ func guardar_datos_juego() -> int:
 	
 	var datos: DatosUsuarioGuardado = DatosUsuarioGuardado.new()
 	
-	datos.vida = DatosJuego.vidas
+	datos.vidas = DatosJuego.vidas
 	datos.monedas_oro = DatosJuego.monedas_oro
 	datos.nivel_actual= DatosJuego.nivel_actual
-	datos.num_nivel_actual= DatosJuego.num_nivel_actual
 	datos.nivel_proximo= DatosJuego.proximo_nivel
 	
 	var resultado: int = ResourceSaver.save(ruta, datos)
